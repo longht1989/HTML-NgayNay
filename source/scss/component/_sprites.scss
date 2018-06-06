@@ -1,0 +1,110 @@
+/* style for sprites  */
+
+*[class^="sprite-"] {
+    display: inline-block;
+    background-image: url(../img/sprites.svg);
+    vertical-align: middle;
+    transition: all 0.2s linear;
+}
+
+.sprite {
+    &-menu {
+        width: 18px;
+        height: 16px;
+        background-position: 0px 0px;
+    }
+    &-24h {
+        width: 24px;
+        height: 23px;
+        background-position: -50px 0px;
+    }
+    &-search {
+        width: 14px;
+        height: 14px;
+        background-position: -300px 0px;
+    }
+    &-epaper {
+        width: 14px;
+        height: 18px;
+        background-position: -50px -100px;
+    }
+    &-quizz {
+        width: 19px;
+        height: 24px;
+        background-position: -100px -100px;
+    }
+    &-fire {
+        width: 14px;
+        height: 18px;
+        background-position: 0px -100px;
+    }
+    &-mapmarker {
+        width: 14px;
+        height: 18px;
+        background-position: -150px -100px;
+    }
+    &-building {
+        width: 16px;
+        height: 18px;
+        background-position: -200px -100px;
+    }
+    &-global {
+        width: 18px;
+        height: 18px;
+        background-position: -250px -100px;
+    }
+    &-heart {
+        width: 20px;
+        height: 18px;
+        background-position: -300px -100px;
+    }
+    &-usd {
+        width: 10px;
+        height: 18px;
+        background-position: -350px -100px;
+    }
+    &-law {
+        width: 20px;
+        height: 18px;
+        background-position: -450px -100px;
+    }
+    &-bus {
+        width: 18px;
+        height: 18px;
+        background-position: -400px -100px;
+    }
+    &-leaf {
+        width: 22px;
+        height: 18px;
+        background-position: -50px -150px;
+    }
+    &-star {
+        width: 20px;
+        height: 18px;
+        background-position: -0px -150px;
+    }
+    &-folder {
+        width: 20px;
+        height: 14px;
+        background-position: -100px -150px;
+    }
+    &-home {
+        width: 21px;
+        height: 16px;
+        background-position: -350px 0;
+    }
+    &-calendar {
+        width: 13px;
+        height: 16px;
+        background-position: -250px 0;
+    }
+    &-compass {
+        width: 18px;
+        height: 18px;
+        background-position: -200px -150px;
+    }&-copy {
+        width: 16px;
+        height: 18px;
+        background-position: -150px -150px;
+    }
+}

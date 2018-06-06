@@ -1,0 +1,224 @@
+// container
+.container {
+    padding: 0 8px;
+    @include clearfix;
+    @include breakpoint(sm) {
+        width: 632px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include breakpoint(md) {
+        width: 980px;
+    }
+    .site-header & {
+        @include breakpoint(768px, 1023px) {
+            width: 768px;
+            padding: 0 8px;
+        }
+    }
+}
+
+#site-content {
+    @include clearfix;
+    margin-bottom: 32px;
+}
+
+// coloumn
+.column {
+    &-main {
+        @include breakpoint(md) {
+            float: left;
+            width: 664px;
+        }
+    }
+    &-sidebar {
+        @include breakpoint(md) {
+            width: 300px;
+            float: right;
+        }
+    }
+    &-highlight {
+        @include breakpoint(sm) {
+            width: 70%;
+            float: left;
+        }
+        @include breakpoint(md) {
+            width: 436px;
+            float: left;
+        }
+    }
+    &-latest {
+        @include breakpoint(sm) {
+            width: 29%;
+            float: right;
+        }
+        @include breakpoint(md) {
+            width: 210px;
+        }
+    }
+    &-aside {
+        @include breakpoint(sm) {
+            width: 29%;
+            float: left;
+        }
+        @include breakpoint(md) {
+            width: 210px;
+        }
+    }
+    &-content {
+        @include breakpoint(sm) {
+            width: 70%;
+            float: right;
+        }
+        @include breakpoint(md) {
+            width: 436px;
+        }
+    }
+}
+
+// area dark
+.area--dark {
+    .story--featured,
+    .two-cols {
+        @include breakpoint(sm) {
+            width: 50%;
+            float: left;
+        }
+    }
+    .two-cols {
+        @include breakpoint(sm) {
+            float: right;
+        }
+    }
+}
+
+&.two-cols {
+    @include clearfix;
+    font-size: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    >* {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 8px;
+    }
+    &-sm {
+        @include breakpoint(sm) {
+            @include clearfix;
+            font-size: 0;
+            margin-left: -8px;
+            margin-right: -8px;
+            >* {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 8px;
+            }
+        }
+        &-only {
+            @include breakpoint(768px, 1023px) {
+                @include clearfix;
+                font-size: 0;
+                margin-left: -8px;
+                margin-right: -8px;
+                >* {
+                    width: 50%;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+&.three-cols {
+    @include clearfix;
+    font-size: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    >* {
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 8px;
+    }
+    &-sm {
+        @include breakpoint(sm) {
+            @include clearfix;
+            font-size: 0;
+            margin-left: -8px;
+            margin-right: -8px;
+            >* {
+                width: 33.33%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 8px;
+            }
+        }
+        &-only {
+            @include breakpoint(768px, 1023px) {
+                @include clearfix;
+                font-size: 0;
+                margin-left: -8px;
+                margin-right: -8px;
+                >* {
+                    width: 33.33%;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+&.four-cols {
+    @include clearfix;
+    font-size: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    >* {
+        width: 25%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 8px;
+    }
+    &-sm {
+        @include breakpoint(sm) {
+            @include clearfix;
+            font-size: 0;
+            margin-left: -8px;
+            margin-right: -8px;
+            >* {
+                width: 25%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 8px;
+            }
+        }
+    }
+    &-md {
+        @include breakpoint(md) {
+            @include clearfix;
+            font-size: 0;
+            margin-left: -8px;
+            margin-right: -8px;
+            >* {
+                width: 25%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+// go top
+#gotop {
+    // display: none;
+    position: fixed;
+    right: 10px;
+    bottom: 266px;
+}

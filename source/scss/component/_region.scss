@@ -1,0 +1,163 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 24px;
+    &__header {
+        margin-bottom: 12px;
+        border-top: 2px solid $brand-primary;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 4px 0;
+        position: relative;
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: normal;
+        font-family: $font-family-special;
+        text-transform: uppercase;
+        a {
+            display: inline-block;
+            color: $brand-primary;
+            transition: all 0.2s linear;
+            &:hover {}
+        }
+    }
+    &__icon {
+        position: absolute;
+        text-align: center;
+        right: 0;
+        top: 0px;
+        bottom: 0px;
+        width: 40px;
+        line-height: 30px;
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+        *[class^="sprite-"] {
+            margin-top: 3px;
+        }
+    }
+    &__content {
+        @include clearfix;
+    }
+    &__footer {
+        margin-top: 12px;
+        @include clearfix;
+        .btn {
+            font-size: 12px;
+        }
+    }
+    &--primary {
+        .zone__header {
+            background-color: $brand-primary;
+            padding-left: 8px;
+            border: none;
+        }
+        .zone__title {
+            a {
+                color: white;
+            }
+        }
+        .zone__icon {
+            border-left-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    &--secondary {
+        .zone__header {
+            background-color: $brand-info;
+        }
+    }
+    &--highlight {
+        margin-bottom: 24px;
+        .column {
+            &-latest {
+                background-color: #F0F0F0;
+                @include clearfix;
+                li {
+                    &+li {
+                        border-top: 1px solid #E0E0E0;
+                    }
+                }
+                .story__title {
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+    &--lightgrey {
+        .zone__header,
+        .zone__content {
+            background-color: #F7F7F7;
+            margin-bottom: 0;
+        }
+        .zone__title {
+            padding-left: 8px;
+        }
+        .zone__content {
+            padding: 12px 8px 0;
+        }
+    }
+    .area--dark & {
+        margin-bottom: 0;
+        .zone__header {
+            border: none;
+            padding: 0;
+        }
+        .zone__title {
+            a {
+                color: white;
+            }
+        }
+    }
+    &+.text-muted.text-center {
+        margin-bottom: 16px;
+    }
+}
+
+// mostview
+.mostview {
+    &__order {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 24px;
+        color: $brand-primary;
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+    li {
+        @include clearfix;
+        position: relative;
+        padding-left: 32px;
+        &+li {
+            margin-top: 12px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+            .mostview__order {
+                top: 16px;
+            }
+        }
+        .story {
+            margin-bottom: 0;
+        }
+    }
+}
+
+//area
+.area {
+    &--dark {
+        padding: 16px 0 8px;
+        background-color: #333333;
+        margin-bottom: 24px;
+    }
+}
+
+// ads
+.qc {
+    @include clearfix();
+    margin-bottom: 24px;
+    text-align: center;
+}

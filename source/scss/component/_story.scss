@@ -1,0 +1,174 @@
+/* style for story */
+
+.story {
+    @include clearfix;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s linear !important;
+    margin-bottom: 16px;
+    &__thumb {
+        overflow: hidden;
+        img {
+            @include transition(all, 0.2, linear);
+        }
+    }
+    &__header {
+        margin-top: 8px;
+        .story--horizontal & {
+            margin-top: 0;
+        }
+    }
+    &__footer {
+        margin-top: 8px;
+    }
+    &__relate {
+        padding-left: 12px;
+        position: relative;
+        display: block;
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $brand-primary;
+        }
+    }
+    &__title {
+        font-size: 14px;
+        line-height: 1.4em;
+        font-weight: normal;
+        a {
+            &:visited {
+                // color: #888;
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+            .area--dark & {
+                color: white;
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+    &__meta {
+        font-size: 12px;
+        line-height: 1.4em;
+    }
+    &__summary {
+        color: #777777;
+        margin-top: 8px;
+        display: none;
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+    &__time {
+        color: #999;
+    }
+    &__author {
+        font-weight: bold;
+        color: #333;
+        margin-right: 4px;
+    }
+    &--bold {
+        .story__title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.4em;
+        }
+    }
+    &--horizontal {
+        .story__thumb {
+            float: left;
+            margin-right: 12px;
+        }
+        .story__header {
+            overflow: hidden;
+            padding: 0;
+        }
+        .story__title {
+            margin-bottom: 0;
+        }
+        .story__meta {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    }
+    &--event {
+        .story__header {
+            background-color: #F0F0F0;
+            margin-top: 0;
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 8px;
+        }
+        .story__title {
+            font-family: $font-family-special;
+            font-size: 16px;
+            a {
+                color: $brand-primary;
+            }
+        }
+    }
+    &--highlight {
+        .story__title {
+            font-size: 20px;
+            line-height: 1.4em;
+            font-weight: bold;
+        }
+        padding-bottom: 12px;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    &+.story--border {
+        border-top: 1px solid #eee;
+        padding-top: 12px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &--featured {
+        .area--dark & {
+            .story__thumb {
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 56px;
+                    height: 56px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-left: -28px;
+                    margin-top: -28px;
+                    background-image: url(../img/sprites.svg);
+                    background-position: -100px 0;
+                }
+            }
+        }
+        .story__title {
+            font-size: 20px;
+            line-height: 1.4em;
+            font-weight: bold;
+        }
+    }
+    &--center {
+        .story__thumb {
+            img {
+                max-width: 64px;
+                display: inline-block;
+                border-radius: 50%;
+            }
+        }
+        .story__thumb,
+        .story__title,
+        .story__summary {
+            text-align: center;
+        }
+    }
+}
