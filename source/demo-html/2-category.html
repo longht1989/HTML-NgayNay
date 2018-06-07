@@ -22,6 +22,11 @@
     <script type="text/javascript">
     var ismobile = $(window).width() < 1010;
     var istablet = ismobile && $(window).width() >= 768;
+    if (ismobile) {
+        $('img[data-mobile-url]').each(function() {
+            $(this).hide(0).attr('src', $(this).attr('data-mobile-url')).show(0);
+        });
+    }
     </script>
 </head>
 
@@ -331,13 +336,27 @@
                         <div class="zone__icon"><span class="sprite-epaper"></span></div>
                     </div>
                     <div class="zone__content">
-                        <div class="slider slider--primary">
-                            <article class="story story--featured">
-                                <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h2 class="story__title"><a href="3-detail.html">Amaret geometria torquate romano ignavia adest delapsa transferrem.</a></h2>
-                                </div>
-                            </article>
+                        <div class="slider">
+                            <div id="etoday-slider">
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Amaret geometria torquate romano ignavia adest delapsa transferrem.</a></h2>
+                                    </div>
+                                </article>
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Amaret geometria torquate romano ignavia adest delapsa transferrem.</a></h2>
+                                    </div>
+                                </article>
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Amaret geometria torquate romano ignavia adest delapsa transferrem.</a></h2>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -348,13 +367,39 @@
                         <div class="zone__icon"><span class="sprite-quizz"></span></div>
                     </div>
                     <div class="zone__content">
-                        <div class="slider slider--primary">
-                            <article class="story story--featured">
-                                <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h2 class="story__title"><a href="3-detail.html">Labefactetur alios coniuncta veterum, directam ipsum sic dicturum.</a></h2>
-                                </div>
-                            </article>
+                        <div class="slider slider--secondary">
+                            <div id="quizz-slider">
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Labefactetur alios coniuncta veterum, directam ipsum sic dicturum.</a></h2>
+                                    </div>
+                                </article>
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Labefactetur alios coniuncta veterum, directam ipsum sic dicturum.</a></h2>
+                                    </div>
+                                </article>
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Labefactetur alios coniuncta veterum, directam ipsum sic dicturum.</a></h2>
+                                    </div>
+                                </article>
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Labefactetur alios coniuncta veterum, directam ipsum sic dicturum.</a></h2>
+                                    </div>
+                                </article>
+                                <article class="story story--featured">
+                                    <figure class="story__thumb"><a href="3-detail.html" title=""><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=1" alt=""></a></figure>
+                                    <div class="story__header">
+                                        <h2 class="story__title"><a href="3-detail.html">Labefactetur alios coniuncta veterum, directam ipsum sic dicturum.</a></h2>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </section>

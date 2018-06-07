@@ -102,9 +102,15 @@
         width: 18px;
         height: 18px;
         background-position: -200px -150px;
-    }&-copy {
+    }
+    &-copy {
         width: 16px;
         height: 18px;
         background-position: -150px -150px;
+    }
+    &-close {
+        width: 18px;
+        height: 18px;
+        background-position: -400px 0px;
     }
 }

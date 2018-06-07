@@ -1,33 +1,45 @@
 /* ====================================
    Onload functions
    ==================================== */
-
-if (ismobile) {
-    $('img[data-mobile-url]').each(function() {
-        $(this).hide(0).attr('src', $(this).attr('data-mobile-url')).show(0);
-    });
-}
-
 $(function() {
+    // mobile menu
+    $(".button-close").click(function() {
+        $(".mobile-menu").removeClass("is-active");
+        $(".mobile-24h").removeClass("is-active");
+        $("#mask").removeClass("is-active");
+        $("body").removeAttr("overflow");
+    });
+    $("#mask").click(function() {
+        $(".mobile-menu").removeClass("is-active");
+        $(".mobile-24h").removeClass("is-active");
+        $(this).removeClass("is-active");
+        $("body").removeAttr("overflow");
+    });
+    $(".button-menu").click(function() {
+        $(".mobile-menu").addClass("is-active");
+        $("#mask").addClass("is-active");
+        $("body").css("overflow", "hidden");
+    });
+    $(".button-24h").click(function() {
+        $(".mobile-24h").addClass("is-active");
+        $("#mask").addClass("is-active");
+        $("body").css("overflow", "hidden");
+    });
 
     // index slider
-    $('.zone--highlight .slider').bxSlider({
+    $('#etoday-slider').bxSlider({
         nextText: '',
         prevText: '',
         adaptiveHeight: 1,
-        touchEnabled: 0,
         auto: 1,
         pause: '5000'
     });
-    // author slider
-    $('.zone--special .author_slider').bxSlider({
+    $('#quizz-slider').bxSlider({
         nextText: '',
         prevText: '',
         adaptiveHeight: 1,
-        touchEnabled: 0,
         auto: 1,
-        pagerSelector: ".slider_pager",
-        pause: '5500'
+        pause: '5000'
     });
     // affix navigator
     $('.navigator').affix({

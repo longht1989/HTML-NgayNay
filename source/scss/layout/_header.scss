@@ -33,6 +33,131 @@
             margin-left: 12px;
             margin-top: 12px;
         }
+    } // mobile menu
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        z-index: 101;
+        border-right: 1px solid #ddd;
+        overflow-y: auto;
+        box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.22);
+        transition: all 0.2s ease;
+        .tools {
+            @include clearfix;
+            border-bottom: 1px dashed #eee;
+        }
+        .button-close {
+            float: right;
+        }
+        .searchbox {
+            margin-top: 8px;
+            padding: 0 8px;
+            .form-control {
+                width: calc(100% - 34px);
+            }
+        }
+        .button-search {
+            line-height: 34px;
+            width: 34px;
+            height: 34px;
+            text-align: center;
+            background-color: #ddd;
+        }
+        nav {
+            padding: 0 8px;
+            font-family: $font-family-special;
+            font-size: 16px;
+            margin-top: 8px;
+            text-transform: uppercase;
+            .menu {
+                &>li {
+                    padding: 12px 0 8px;
+                    font-weight: bold;
+                    &+li {
+                        border-top: 1px solid #eaeaea;
+                    }
+                    a {
+                        color: #555;
+                        display: block;
+                    }
+                }
+                &__sub {
+                    text-transform: none;
+                    padding-left: 16px;
+                    margin-top: 4px;
+                    font-weight: normal;
+                    li {
+                        padding: 8px 0;
+                        &+li {
+                            border-top: 1px dashed #eee;
+                        }
+                    }
+                }
+            }
+        }
+        &.is-active{
+            right: 80px;
+        }
+    }
+    .mobile-24h {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        z-index: 101;
+        border-left: 1px solid #ddd;
+        overflow-y: auto;
+        box-shadow: -1px 0px 4px 0px rgba(0, 0, 0, 0.22);
+        transition: all 0.2s ease;
+        .tools {
+            @include clearfix;
+            border-bottom: 1px dashed #eee;
+        }
+        .button-close {
+            float: left;
+        }
+        .title {
+            float: right;
+            font-size: 18px;
+            line-height: 48px;
+            padding-right: 8px;
+            font-family: $font-family-special;
+            text-transform: uppercase;
+            color: $brand-primary;
+        }
+        .listing {
+            padding: 0 8px;
+            li {
+                &+li {
+                    border-top: 1px solid #eee;
+                }
+            }
+        }
+        &.is-active{
+            left: 80px;
+        }
+    }
+}
+
+#mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: black;
+    opacity: 0.6;
+    &.is-active {
+        display: block;
     }
 }
 

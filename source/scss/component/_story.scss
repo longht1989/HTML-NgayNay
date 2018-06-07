@@ -59,6 +59,8 @@
     &__meta {
         font-size: 12px;
         line-height: 1.4em;
+        margin-top: 4px;
+        color: #999;
     }
     &__summary {
         color: #777777;
@@ -122,8 +124,6 @@
             line-height: 1.4em;
             font-weight: bold;
         }
-        padding-bottom: 12px;
-        border-bottom: 1px solid #EEEEEE;
     }
     &+.story--border {
         border-top: 1px solid #eee;
@@ -169,6 +169,11 @@
         .story__title,
         .story__summary {
             text-align: center;
+        }
+        .story__summary {
+            @include breakpoint(xs) {
+                display: block;
+            }
         }
     }
 }
