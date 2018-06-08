@@ -64,4 +64,14 @@
         font-size: 18px;
         display: inline-block;
     }
+    .container--full & {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 8px;
+        max-width: 768px;
+        @include breakpoint(md) {
+            max-width: 980px;
+            padding: 0;
+        }
+    }
 }

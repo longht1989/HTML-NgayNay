@@ -16,6 +16,9 @@
             padding: 0 8px;
         }
     }
+    &--full {
+        @include clearfix;
+    }
 }
 
 #site-content {
