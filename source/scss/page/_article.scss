@@ -712,7 +712,8 @@
             transition: all 0.2s linear;
             border: 1px solid #e0e0e0;
             &:hover {
-                opacity: 0.7;
+                // opacity: 0.7;
+                box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
             }
         }
         &-status {
@@ -739,7 +740,7 @@
             .answer-item {
                 opacity: 0.6;
                 cursor: default;
-
+                box-shadow: none;
                 &.chosen {
                     opacity: 1;
                     background-color: white;
@@ -775,6 +776,45 @@
                     background-position: -250px -50px;
                 }
             }
+        }
+    }
+}
+
+.quiz-wrap {
+    .total-score {
+        background-color: #F0F0F0;
+        margin-top: 24px;
+        text-align: center;
+        .title {
+            font-family: $font-family-special;
+            border-bottom: 1px solid #ddd;
+            padding: 16px 0;
+            text-transform: uppercase;
+        }
+        .description {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        .score {
+            font-size: 36px;
+            margin-bottom: 0;
+            padding: 32px 0;
+            span {
+                color: $brand-info;
+            }
+        }
+    }
+    .form-input {
+        background-color: #f0f0f0;
+        padding: 16px;
+        .hdr h3 {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+        .confirm {
+            text-align: right;
+            margin-bottom: 0;
         }
     }
 }
