@@ -40,11 +40,16 @@
         }
     }
     &__share {
-        text-align: right;
-        margin-top: 8px;
+        margin-top: 4px;
         .facebook,
         .zalo {
             display: inline-block;
+        }
+        @include breakpoint(md) {
+            .article__share {
+                text-align: right;
+                margin-top: 0px;
+            }
         }
     }
     &__source {
@@ -553,6 +558,42 @@
                 max-width: 800px;
                 padding: 0;
             }
+        }
+    }
+    &--video {
+        padding: 8px 0px 16px;
+        @include clearfix;
+        @include breakpoint(320px, 1023px) {
+            display: table;
+            .article__header {
+                display: table-footer-group;
+            }
+            .article__title {
+                margin-top: 8px;
+            }
+
+            .article__body {
+                display: table-header-group;
+            }
+        }
+        @include breakpoint(md) {
+            .article__header {
+                width: 50%;
+                float: right;
+                padding-left: 8px;
+            }
+            .article__body {
+                width: 50%;
+                float: left;
+                padding-right: 8px;
+            }
+        }
+        .article__title {
+            color: white;
+        }
+        .article__summary {
+            color: #c2c2c2;
+            font-weight: normal;
         }
     }
 }
