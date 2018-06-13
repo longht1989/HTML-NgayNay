@@ -176,4 +176,35 @@
             }
         }
     }
+    &.is-playing {
+        .story__thumb {
+            position: relative;
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: black;
+                opacity: 0.3;
+            }
+            img {
+                filter: blur(2px);
+            }
+        }
+        .story__title {
+            &::before {
+                content: 'Đang phát';
+                display: inline;
+                font-size: 0.7em;
+                padding: 2px 6px;
+                margin-right: 4px;
+                border-radius: 2px;
+                color: white;
+                background-color: $brand-primary
+            }
+        }
+    }
 }
