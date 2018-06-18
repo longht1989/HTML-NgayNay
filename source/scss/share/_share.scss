@@ -71,3 +71,20 @@
         float: right;
     }
 }
+
+//datepicker
+.datepicker {
+    input {
+        border: none;
+        width: 90px;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+    &:hover {
+        input {
+            background-color: #eaeaea;
+        }
+    }
+}
