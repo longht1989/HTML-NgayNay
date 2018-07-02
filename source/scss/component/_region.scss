@@ -49,6 +49,24 @@
         .btn {
             font-size: 12px;
         }
+        .view-more {
+            text-align: center;
+            margin-top: 12px;
+            @include breakpoint(sm) {
+                display: none;
+            }
+            .btn {
+                width: 100%;
+                border-color: #ddd;
+                font-family: $font-family-special;
+                font-size: 14px;
+            }
+            span {
+                color: $brand-primary;
+                margin-left: 2px;
+                text-transform: uppercase;
+            }
+        }
     }
     &--primary {
         .zone__header {
@@ -73,20 +91,7 @@
     &--highlight {
         margin-bottom: 24px;
         .story--highlight {
-            &+.two-cols {
-                padding-top: 12px;
-                position: relative;
-                &::before {
-                    content: '';
-                    display: block;
-                    background-color: #eee;
-                    height: 1px;
-                    position: absolute;
-                    top: 0;
-                    left: 8px;
-                    right: 8px;
-                }
-            }
+            &+.two-cols {}
         }
         .column {
 
@@ -126,6 +131,18 @@
         .zone__title {
             a {
                 color: white;
+                padding-left: 12px;
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 4px;
+                    height: 18px;
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    background-color: #fff;
+                }
             }
         }
     }

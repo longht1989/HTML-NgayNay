@@ -5,7 +5,12 @@
     position: relative;
     overflow: hidden;
     transition: all 0.2s linear !important;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    &+.story {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
     &__thumb {
         overflow: hidden;
         img {
@@ -127,7 +132,7 @@
     }
     &+.story--border {
         border-top: 1px solid #eee;
-        padding-top: 12px;
+        padding-top: 4px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -176,6 +181,16 @@
             }
         }
     }
+    &--circle {
+        .story__thumb {
+            @include breakpoint(sm) {
+                max-width: 64px;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
     &.is-playing {
         .story__thumb {
             position: relative;
@@ -204,6 +219,60 @@
                 border-radius: 2px;
                 color: white;
                 background-color: $brand-primary
+            }
+        }
+    }
+    &.hasvideo {
+        .story__title {
+            a {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url(../img/sprites.svg);
+                    background-position: -100px -200px;
+                    margin-left: 4px;
+                    .area--dark & {
+                        background-position-y: -250px;
+                    }
+                }
+            }
+        }
+    }
+    &.hasphoto {
+        .story__title {
+            a {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url(../img/sprites.svg);
+                    background-position: -50px -200px;
+                    margin-left: 4px;
+                    .area--dark & {
+                        background-position-y: -250px;
+                    }
+                }
+            }
+        }
+    }
+    &.hasaudio {
+        .story__title {
+            a {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url(../img/sprites.svg);
+                    background-position: 0px -200px;
+                    margin-left: 4px;
+                    .area--dark & {
+                        background-position-y: -250px;
+                    }
+                }
             }
         }
     }

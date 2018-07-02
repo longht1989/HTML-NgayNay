@@ -27,13 +27,13 @@ $(function() {
     });
 
     // index slider
-    $('#etoday-slider').bxSlider({
-        nextText: '',
-        prevText: '',
-        adaptiveHeight: 1,
-        auto: 1,
-        pause: '5000'
-    });
+    // $('#etoday-slider').bxSlider({
+    //     nextText: '',
+    //     prevText: '',
+    //     adaptiveHeight: 1,
+    //     auto: 1,
+    //     pause: '5000'
+    // });
     $('#opinion-slider').bxSlider({
         nextText: '',
         prevText: '',
@@ -41,13 +41,13 @@ $(function() {
         auto: 1,
         pause: '5000'
     });
-    $('#quizz-slider').bxSlider({
-        nextText: '',
-        prevText: '',
-        adaptiveHeight: 1,
-        auto: 1,
-        pause: '5000'
-    });
+    // $('#quizz-slider').bxSlider({
+    //     nextText: '',
+    //     prevText: '',
+    //     adaptiveHeight: 1,
+    //     auto: 1,
+    //     pause: '5000'
+    // });
     // affix navigator
     $('.navigator').affix({
         offset: {

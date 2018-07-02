@@ -8,21 +8,32 @@
     @include breakpoint(sm) {
         display: none;
     }
-    *[class^="button-"] {
-        background-color: #F7F7F7;
-        text-align: center;
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-    }
     .button {
-        &-menu {
-            border-right: 1px solid #eaeaea;
-            float: left;
-        }
-        &-24h {
-            border-left: 1px solid #eaeaea;
+        &-group {
+            @include clearfix;
+            display: block;
             float: right;
+            text-align: right;
+            font-size: 0;
+            *[class^="button-"] {
+                border-left: 1px solid #eaeaea;
+                background-color: #F7F7F7;
+                text-align: center;
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                display: inline-block;
+            }
+        }
+        &-menu {}
+        &-24h {}
+        &-close {
+            background-color: #F7F7F7;
+            text-align: center;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            display: inline-block;
         }
     }
     .logo {
@@ -33,13 +44,14 @@
             margin-left: 12px;
             margin-top: 12px;
         }
-    } // mobile menu
+    }
+    /* mobile menu */
     .mobile-menu {
         display: block;
         position: fixed;
         top: 0;
-        right: 100%;
-        left: 0;
+        left: 100%;
+        right: 0;
         bottom: 0;
         background-color: white;
         z-index: 101;
@@ -51,8 +63,12 @@
             @include clearfix;
             border-bottom: 1px dashed #eee;
         }
-        .button-close {
+        .logo {
             float: right;
+            padding-right: 8px;
+        }
+        .button-close {
+            float: left;
         }
         .searchbox {
             margin-top: 8px;
@@ -100,15 +116,15 @@
                 }
             }
         }
-        &.is-active{
-            right: 80px;
+        &.is-active {
+            left: 80px;
         }
     }
     .mobile-24h {
         position: fixed;
         top: 0;
-        left: 100%;
-        right: 0;
+        right: 100%;
+        left: 0;
         bottom: 0;
         background-color: white;
         z-index: 101;
@@ -121,13 +137,13 @@
             border-bottom: 1px dashed #eee;
         }
         .button-close {
-            float: left;
+            float: right;
         }
         .title {
-            float: right;
+            float: left;
             font-size: 18px;
             line-height: 48px;
-            padding-right: 8px;
+            padding-left: 8px;
             font-family: $font-family-special;
             text-transform: uppercase;
             color: $brand-primary;
@@ -140,8 +156,8 @@
                 }
             }
         }
-        &.is-active{
-            left: 80px;
+        &.is-active {
+            right: 80px;
         }
     }
 }
@@ -155,7 +171,7 @@
     left: 0;
     z-index: 100;
     background-color: black;
-    opacity: 0.6;
+    opacity: 0.8;
     &.is-active {
         display: block;
     }
@@ -373,16 +389,14 @@
 }
 
 .event {
-    @include clearfix();
-    font-size: 14px;
-    line-height: 35px;
-    margin-top: 8px;
-    max-height: 35px;
-    overflow: hidden;
+    &-wrap {
+        @include clearfix();
+        font-size: 14px; // line-height: 35px;
+        margin-top: 8px;
+    }
     &__listing {
-        float: left;
         li {
-            float: left;
+            display: inline;
             &::before {
                 display: inline-block;
                 content: '•';
@@ -392,7 +406,7 @@
                 top: -2px;
             }
             &+li {
-                margin-left: 24px;
+                margin-left: 16px;
             }
         }
         .event__label {
@@ -403,8 +417,7 @@
     }
     &__label {
         font-family: $font-family-special;
-        color: $brand-primary; // margin-right: 12px;
-        float: left;
+        color: $brand-primary;
         text-transform: uppercase;
         font-weight: bold;
     }
