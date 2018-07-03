@@ -191,6 +191,24 @@
             }
         }
     }
+    &--gif {
+        .story__thumb {
+            a {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 56.25%;
+                img {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
     &.is-playing {
         .story__thumb {
             position: relative;
@@ -219,60 +237,6 @@
                 border-radius: 2px;
                 color: white;
                 background-color: $brand-primary
-            }
-        }
-    }
-    &.hasvideo {
-        .story__title {
-            a {
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 14px;
-                    height: 14px;
-                    background-image: url(../img/sprites.svg);
-                    background-position: -100px -200px;
-                    margin-left: 4px;
-                    .area--dark & {
-                        background-position-y: -250px;
-                    }
-                }
-            }
-        }
-    }
-    &.hasphoto {
-        .story__title {
-            a {
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 14px;
-                    height: 14px;
-                    background-image: url(../img/sprites.svg);
-                    background-position: -50px -200px;
-                    margin-left: 4px;
-                    .area--dark & {
-                        background-position-y: -250px;
-                    }
-                }
-            }
-        }
-    }
-    &.hasaudio {
-        .story__title {
-            a {
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 14px;
-                    height: 14px;
-                    background-image: url(../img/sprites.svg);
-                    background-position: 0px -200px;
-                    margin-left: 4px;
-                    .area--dark & {
-                        background-position-y: -250px;
-                    }
-                }
             }
         }
     }

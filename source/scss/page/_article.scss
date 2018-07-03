@@ -43,7 +43,9 @@
         margin-top: 4px;
         .facebook,
         .zalo {
-            display: inline-block;
+            float: left;
+            line-height: 0;
+            margin-left: 4px;
         }
         @include breakpoint(md) {
             .article__share {
