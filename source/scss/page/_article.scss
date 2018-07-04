@@ -611,26 +611,26 @@
                 @include breakpoint(md) {
                     padding: 0;
                 }
-                .notification,
-                .quote,
-                .quotes,
-                .half-img {
-                    &.pull-right {
-                        margin-left: 16px;
-                        @include breakpoint(md) {
-                            margin-right: -64px;
-                        }
-                    }
-                    &.pull-left {
-                        margin-right: 16px;
-                        @include breakpoint(md) {
-                            margin-left: -64px;
-                        }
+            }
+            .notification,
+            .quote,
+            .quotes,
+            .half-img {
+                &.pull-right {
+                    margin-left: 16px;
+                    @include breakpoint(md) {
+                        margin-right: -64px;
                     }
                 }
-                .half-img {
-                    max-width: 50% !important;
+                &.pull-left {
+                    margin-right: 16px;
+                    @include breakpoint(md) {
+                        margin-left: -64px;
+                    }
                 }
+            }
+            .half-img {
+                max-width: 50% !important;
             }
         }
         &__footer {
