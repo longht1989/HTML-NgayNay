@@ -18,3 +18,9 @@ _:future,
         }
     }
 }
+
+.sticky_column{
+    @include breakpoint(md){
+        width: 300px;
+    }
+}

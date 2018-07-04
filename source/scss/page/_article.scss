@@ -579,7 +579,7 @@
             }
             .half-img {
                 text-align: center;
-                max-width: 928px !important;
+                max-width: 50% !important;
                 img {
                     display: inline-block;
                     max-width: 100%;
@@ -588,6 +588,9 @@
             }
             table.full-img {
                 max-width: initial !important;
+            }
+            table.half-img {
+                margin: 0 auto 12px;
             }
             .full-text,
             .notification,
