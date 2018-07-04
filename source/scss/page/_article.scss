@@ -421,6 +421,17 @@
                 }
             }
         }
+        /* dropcap */
+        .dropcap {
+            &:first-letter {
+                font-size: 54px;
+                line-height: 54px;
+                float: left;
+                margin-right: 8px;
+                color: $brand-primary;
+                padding: 0 4px;
+            }
+        }
     }
     /* article related listing */
     &__related-listing {
