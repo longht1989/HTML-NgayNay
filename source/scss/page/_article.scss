@@ -276,7 +276,8 @@
             }
         }
         /* quote */
-        .quote {
+        .quote,
+        .quotes {
             font-family: $font-family-special;
             clear: both;
             border-radius: 5px;
@@ -313,7 +314,8 @@
                 margin-left: 10px;
             }
         }
-        table.quote {
+        table.quote,
+        table.quotes {
             margin-bottom: 16px;
             td {
                 padding: 16px 16px 24px 24px;
@@ -590,6 +592,7 @@
             .full-text,
             .notification,
             .quote,
+            .quotes,
             &>p,
             &>div,
             &>h3,
@@ -610,6 +613,7 @@
                 }
                 .notification,
                 .quote,
+                .quotes,
                 .half-img {
                     &.pull-right {
                         margin-left: 16px;
