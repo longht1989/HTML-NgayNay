@@ -58,11 +58,13 @@
             }
             .btn {
                 width: 100%;
-                border-color: #ddd;
+                border: none;
+                background-color: #f0f0f0;
                 font-family: $font-family-special;
                 font-size: 14px;
             }
             span {
+                font-weight: bold;
                 color: $brand-primary;
                 margin-left: 2px;
                 text-transform: uppercase;
@@ -95,17 +97,31 @@
             &+.two-cols {}
         }
         .column {
-
             &-latest {
-                background-color: #F0F0F0;
                 @include clearfix;
                 li {
                     &+li {
-                        border-top: 1px solid #E0E0E0;
+                        @include breakpoint(xs) {
+                            border-top: 1px solid #E0E0E0;
+                        }
                     }
                 }
-                .story__title {
-                    padding: 0 8px;
+                .story {
+                    @include breakpoint(sm) {
+                        margin-bottom: 4px;
+                    }
+                    &__header {
+                        @include breakpoint(sm) {
+                            margin-top: 8px;
+                        }
+                    }
+                    &__title {
+                        padding-left: 8px;
+                        @include breakpoint(sm) {
+                            padding-left: 0;
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
         }
@@ -120,7 +136,7 @@
             padding-left: 8px;
         }
         .zone__content {
-            padding: 12px 8px 0;
+            padding: 12px 8px;
         }
     }
     .area--dark & {

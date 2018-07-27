@@ -434,6 +434,46 @@
                 padding: 0 4px;
             }
         }
+        /* box-image */
+        .box-image {
+            @include clearfix;
+            clear: both;
+            margin-left: -4px;
+            margin-right: -4px;
+            &.box-dou {
+                .box-col {
+                    width: 50%;
+                }
+            }
+            &.box-trip {
+                .box-col {
+                    width: 33.33%;
+                }
+            }
+            &.box-quad {
+                .box-col {
+                    width: 50%;
+                }
+            }
+            .box-col {
+                float: left;
+                padding: 0 4px;
+                margin-bottom: 0;
+            }
+            .box-desc {
+                clear: both;
+                text-align: center;
+                font-style: italic;
+                font-size: 16px;
+            }
+            .item-image {
+                margin-bottom: 8px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
     }
     /* article related listing */
     &__related-listing {
