@@ -619,7 +619,9 @@
             }
             .half-img {
                 text-align: center;
-                max-width: 50% !important;
+                @include breakpoint(sm) {
+                    max-width: 50% !important;
+                }
                 img {
                     display: inline-block;
                     max-width: 100%;
@@ -649,7 +651,8 @@
                     max-width: 800px;
                 }
             }
-            .full-text {
+            .full-text,
+            p {
                 padding: 0 8px;
                 @include breakpoint(md) {
                     padding: 0;
@@ -671,9 +674,14 @@
                         margin-left: -64px;
                     }
                 }
+                .author {
+                    display: block;
+                }
             }
             .half-img {
-                max-width: 50% !important;
+                @include breakpoint(sm) {
+                    max-width: 50% !important;
+                }
             }
         }
         &__footer {
