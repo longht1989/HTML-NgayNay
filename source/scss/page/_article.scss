@@ -608,6 +608,9 @@
             text-align: justify;
         }
         &__content {
+            .notification{
+                padding: 12px;
+            }
             .full-img {
                 text-align: center;
                 max-width: initial !important;
@@ -631,7 +634,8 @@
             table.full-img {
                 max-width: initial !important;
             }
-            table.half-img {
+            table.half-img,
+            table.aside-img {
                 margin: 0 auto 12px;
             }
             .full-text,
@@ -661,7 +665,8 @@
             .notification,
             .quote,
             .quotes,
-            .half-img {
+            .half-img,
+            .aside-img {
                 &.pull-right {
                     margin-left: 16px;
                     @include breakpoint(md) {
@@ -678,7 +683,8 @@
                     display: block;
                 }
             }
-            .half-img {
+            .half-img,
+            .aside-img {
                 @include breakpoint(sm) {
                     max-width: 50% !important;
                 }
