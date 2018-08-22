@@ -622,6 +622,7 @@
             }
             .half-img {
                 text-align: center;
+                clear: both;
                 @include breakpoint(sm) {
                     max-width: 50% !important;
                 }
