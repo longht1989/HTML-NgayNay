@@ -210,6 +210,12 @@
                     transform: translate(-50%, -50%);
                 }
             }
+            #listing-zone-ajax & {
+                width: 112px;
+                @include breakpoint(md) {
+                    width: 210px;
+                }
+            }
         }
     }
     &.is-playing {
