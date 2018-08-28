@@ -251,3 +251,34 @@
     right: 10px;
     bottom: 266px;
 }
+
+// Visible screen
+*[class*="visible-"] {
+    display: none;
+}
+
+.visible {
+    &-sm {
+        @include breakpoint(sm) {
+            display: block;
+        }
+    }
+    &-md {
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+}
+
+.hidden {
+    &-sm {
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+    &-md {
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+}

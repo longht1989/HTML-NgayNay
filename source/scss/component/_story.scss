@@ -143,19 +143,22 @@
     &--featured {
         .area--dark & {
             .story__thumb {
-                position: relative;
-                &::before {
-                    content: '';
+                a {
+                    position: relative;
                     display: block;
-                    width: 56px;
-                    height: 56px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    margin-left: -28px;
-                    margin-top: -28px;
-                    background-image: url(../img/sprites.svg);
-                    background-position: -100px 0;
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 56px;
+                        height: 56px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-left: -28px;
+                        margin-top: -28px;
+                        background-image: url(../img/sprites.svg);
+                        background-position: -100px 0;
+                    }
                 }
             }
         }

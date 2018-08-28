@@ -16,12 +16,15 @@
             color: #555;
             margin-bottom: 8px;
         }
+        @include breakpoint(md) {
+            font-size: 30px;
+        }
     }
     &__meta {
         color: #999;
         margin-top: 8px;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 20px;
         @include clearfix;
         .article__author {
             font-family: 'MuliBold', sans-serif;
@@ -31,21 +34,28 @@
         .date {
             @include breakpoint(sm) {
                 float: left;
+                position: relative;
+                top: 2px;
             }
         }
         .article__share {
+            margin-top: 4px;
             @include breakpoint(sm) {
                 float: right;
+                margin-top: 0;
             }
         }
     }
     &__share {
-        margin-top: 4px;
+        // margin-top: 4px;
+        @include clearfix();
         .facebook,
         .zalo {
             float: left;
-            line-height: 0;
-            margin-left: 4px;
+            @include breakpoint(sm) {
+                line-height: 0;
+                margin-left: 4px;
+            }
         }
         @include breakpoint(md) {
             .article__share {
@@ -491,7 +501,7 @@
                 line-height: 1.4em;
                 padding-left: 16px;
                 position: relative;
-                font-weight: bold;
+                font-weight: normal;
                 color: black;
                 &:hover {
                     color: $brand-primary;
@@ -591,6 +601,25 @@
     }
     &__react {
         margin-top: 12px;
+        &>a {
+            width: 33.33%;
+            float: left;
+            text-align: center;
+            line-height: 35px;
+            transition: all 0.2s linear;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .facebook {
+            background-color: #3c5898;
+        }
+        .google {
+            background-color: #cd3627;
+        }
+        .zalo {
+            background-color: #018fe5;
+        }
     }
     .container--full & {
         &__header {
@@ -608,7 +637,7 @@
             text-align: justify;
         }
         &__content {
-            .notification{
+            .notification {
                 padding: 12px;
             }
             .full-img {
@@ -618,6 +647,9 @@
                     display: inline-block;
                     max-width: 100%;
                     height: auto;
+                }
+                .fig {
+                    padding: 0 12px;
                 }
             }
             .half-img {
@@ -658,7 +690,7 @@
             }
             .full-text,
             p {
-                padding: 0 8px;
+                padding: 0 12px;
                 @include breakpoint(md) {
                     padding: 0;
                 }
@@ -694,7 +726,7 @@
         &__footer {
             margin-left: auto;
             margin-right: auto;
-            padding: 0 8px;
+            padding: 0 12px;
             max-width: 768px;
             @include breakpoint(md) {
                 max-width: 800px;

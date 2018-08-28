@@ -16,10 +16,8 @@
             text-align: right;
             font-size: 0;
             *[class^="button-"] {
-                border-left: 1px solid #eaeaea;
-                background-color: #F7F7F7;
                 text-align: center;
-                width: 48px;
+                width: 40px;
                 height: 48px;
                 line-height: 48px;
                 display: inline-block;
@@ -49,26 +47,26 @@
     .mobile-menu {
         display: block;
         position: fixed;
-        top: 0;
-        left: 100%;
+        top: -100%;
+        left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 100%;
         background-color: white;
         z-index: 101;
         border-right: 1px solid #ddd;
         overflow-y: auto;
         box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.22);
-        transition: all 0.2s ease;
+        transition: all 0.2s linear;
         .tools {
             @include clearfix;
             border-bottom: 1px dashed #eee;
         }
         .logo {
-            float: right;
-            padding-right: 8px;
+            float: left;
+            padding-left: 8px;
         }
         .button-close {
-            float: left;
+            float: right;
         }
         .searchbox {
             margin-top: 8px;
@@ -94,30 +92,50 @@
                 &>li {
                     padding: 12px 0 8px;
                     font-weight: bold;
+                    position: relative;
                     &+li {
                         border-top: 1px solid #eaeaea;
                     }
                     a {
                         color: #555;
                         display: block;
+                        margin-right: 20px;
                     }
                 }
                 &__sub {
                     text-transform: none;
                     padding-left: 16px;
                     margin-top: 4px;
-                    font-weight: normal;
+                    font-weight: normal; // height: 0;
+                    // overflow: hidden;
+                    display: none; // transition: all 0.2s linear;
                     li {
                         padding: 8px 0;
                         &+li {
                             border-top: 1px dashed #eee;
                         }
                     }
+                    &.is-active {
+                        // height: initial;
+                        // overflow: auto;
+                    }
                 }
             }
         }
         &.is-active {
-            left: 80px;
+            top: 0;
+            bottom: 0;
+        }
+        .sprite-caret-down {
+            position: absolute;
+            top: 14px;
+            right: -0px;
+            opacity: 0.4;
+            transition: all 0.2s linear;
+            &.is-active {
+                opacity: 1;
+                transform: rotate(-180deg);
+            }
         }
     }
     .mobile-24h {
@@ -157,7 +175,7 @@
             }
         }
         &.is-active {
-            right: 80px;
+            right: 0px;
         }
     }
 }
@@ -244,13 +262,7 @@
         padding: 8px 0;
         border-bottom: 1px solid #eee;
         margin-bottom: 12px;
-        .searchbox {
-            float: left;
-            width: 320px;
-            .form-control {
-                width: 284px;
-            }
-        }
+
         time {
             float: right;
             color: #999999;
@@ -267,6 +279,13 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+    .searchbox {
+        float: left;
+        width: 320px;
+        .form-control {
+            width: 284px;
         }
     }
 }
@@ -348,6 +367,41 @@
             &+li {
                 border-left: 1px solid #bb3c2f;
             }
+            &.menu__tools {
+                float: right;
+                text-align: right;
+                &>*[class^="sprite-"] {
+                    margin: 0 8px;
+                }
+                .menu__sub {
+                    >li {
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+                &:hover {
+                    .menu__sub {
+                        left: initial;
+                        right: 0;
+                        >li {
+                            a {
+                                font-size: inherit;
+                                text-transform: uppercase;
+                                background-color: darken($brand-primary, 5%);
+                                border-color: #af4c47;
+                                &:hover {
+                                    background-color: darken($brand-primary, 7%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .button-search {
+                    display: inline-block;
+                    padding: 0;
+                }
+            }
         }
         .home {
             a {
@@ -376,6 +430,9 @@
                 }
             }
         }
+        &__search {
+            display: none;
+        }
     }
     &.affix {
         position: fixed;
@@ -385,6 +442,9 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
         border-top: none;
         background-color: $brand-primary;
+        .menu__search {
+            display: block;
+        }
     }
 }
 

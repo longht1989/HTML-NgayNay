@@ -29,7 +29,8 @@
         <div class="button-group">
             <a href="2-category.html" class="button-quiz"><span class="sprite-button-quiz"></span></a>
             <a href="2-category.html" class="button-longform"><span class="sprite-button-longform"></span></a>
-            <a class="button-24h"><span class="sprite-24h"></span></a>
+            <a href="2-category.html" class="button-24h"><span class="sprite-24h"></span></a>
+            <a href="9-topics.html" class="button-chart"><span class="sprite-chart"></span></a>
             <a class="button-menu"><span class="sprite-menu"></span></a>
         </div>
         <!-- mobile menu -->
@@ -47,13 +48,22 @@
                 <ul class="menu">
                     <li>
                         <a href="2-category.html">Xã hội</a>
+                        <span class="sprite-caret-down"></span>
                         <ul class="menu__sub">
                             <li><a href="2-category.html">Điểm báo công nghệ</a></li>
                             <li><a href="2-category.html">Sản phẩm - Dịch vụ</a></li>
                             <li><a href="2-category.html">Xu hướng</a></li>
                         </ul>
                     </li>
-                    <li><a href="2-category.html">Thế giới</a></li>
+                    <li>
+                        <a href="2-category.html">Thế giới</a>
+                        <span class="sprite-caret-down"></span>
+                        <ul class="menu__sub">
+                            <li><a href="2-category.html">Điểm báo công nghệ</a></li>
+                            <li><a href="2-category.html">Sản phẩm - Dịch vụ</a></li>
+                            <li><a href="2-category.html">Xu hướng</a></li>
+                        </ul>
+                    </li>
                     <li><a href="2-category.html">Pháp luật</a></li>
                     <li><a href="2-category.html">Môi trường</a></li>
                     <li><a href="2-category.html">Sức khỏe</a></li>
@@ -192,7 +202,7 @@
             <div class="container">
                 <ul class="menu">
                     <li class="home"><a href="1-index.html"><span class="sprite-home"></span></a></li>
-                    <li><a href="2-category.html">Xã hội</a></li>
+                    <li><a href="2-category.html">24/7</a></li>
                     <li>
                         <a href="2-category.html">Thế giới</a>
                         <ul class="menu__sub">
@@ -201,20 +211,30 @@
                             <li><a href="2-category.html">Xu hướng</a></li>
                         </ul>
                     </li>
-                    <li class="is-active"><a href="2-category.html">Kinh tế</a></li>
-                    <li><a href="2-category.html">Pháp luật</a></li>
-                    <li><a href="2-category.html">Môi trường</a></li>
+                    <li class="is-active"><a href="2-category.html">Khoa học</a></li>
+                    <li><a href="2-category.html">Văn hóa</a></li>
+                    <li><a href="2-category.html">Tầm nhìn Unesco</a></li>
                     <li><a href="2-category.html">Sức khỏe</a></li>
                     <li><a href="2-category.html">Du lịch</a></li>
                     <li><a href="2-category.html">Giải trí</a></li>
-                    <li><a href="2-category.html">Địa ốc</a></li>
-                    <li>
-                        <a href="2-category.html">Video</a>
+                    <li class="visible-md"><a href="2-category.html">Địa ốc</a></li>
+                    <li class="menu__tools">
+                        <span class="sprite-bars"></span>
                         <ul class="menu__sub">
-                            <li><a href="2-category.html">Điểm báo công nghệ</a></li>
-                            <li><a href="2-category.html">Sản phẩm - Dịch vụ</a></li>
-                            <li><a href="2-category.html">Xu hướng</a></li>
+                            <li class="hidden-md"><a href="2-category.html">Địa ốc</a></li>
+                            <li><a href="2-category.html">Video</a></li>
+                            <li><a href="2-category.html">Special Today</a></li>
+                            <li><a href="2-category.html">Game news</a></li>
                         </ul>
+                    </li>
+                    <li class="menu__tools menu__search">
+                        <span class="sprite-search-white"></span>
+                        <div class="menu__sub">
+                            <div class="searchbox">
+                                <input type="text" class="form-control" placeholder="Nhập từ khóa tìm kiếm">
+                                <a class="button-search"><span class="sprite-search"></span></a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -369,7 +389,7 @@
                 <!-- normal zone -->
                 <section class="zone zone--primary">
                     <div class="zone__header">
-                        <h3 class="zone__title"><a href="2-category.html">E - Today</a></h3>
+                        <h3 class="zone__title"><a href="2-category.html">Special Today</a></h3>
                         <div class="zone__icon"><span class="sprite-epaper"></span></div>
                     </div>
                     <div class="zone__content two-cols-sm">
@@ -408,14 +428,14 @@
                     </div>
                     <div class="zone__footer">
                         <div class="view-more">
-                            <a class="btn btn-default" href="2-category.html" title="Thời sự">Xem thêm mục <span>E - Today</span></a>
+                            <a class="btn btn-default" href="2-category.html" title="Special Today">Xem thêm mục <span>Special Today</span></a>
                         </div>
                     </div>
                 </section>
                 <!-- normal zone -->
                 <section class="zone zone--primary zone--secondary">
                     <div class="zone__header">
-                        <h3 class="zone__title"><a href="2-category.html">Quizz news</a></h3>
+                        <h3 class="zone__title"><a href="2-category.html">Game news</a></h3>
                         <div class="zone__icon"><span class="sprite-quizz"></span></div>
                     </div>
                     <div class="zone__content two-cols-sm">
@@ -657,6 +677,9 @@
         </div>
         <!-- .main area -->
         <div class="container">
+            <!-- middle banner -->
+            <div class="qc visible-md"><a href="#"><img src="https://source.unsplash.com/random/980x90?sig=1" alt="" class="img-responsive">
+            banner980x90</a></div>
             <!-- zone listing -->
             <div class="three-cols-sm">
                 <!-- normal zone -->

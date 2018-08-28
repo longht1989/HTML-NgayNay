@@ -20,12 +20,17 @@ $(function() {
         $("#mask").addClass("is-active");
         $("body").css("overflow", "hidden");
     });
-    $(".button-24h").click(function() {
-        $(".mobile-24h").addClass("is-active");
-        $("#mask").addClass("is-active");
-        $("body").css("overflow", "hidden");
+    // $(".button-24h").click(function() {
+    //     $(".mobile-24h").addClass("is-active");
+    //     $("#mask").addClass("is-active");
+    //     $("body").css("overflow", "hidden");
+    // });
+    // toggle sub menu mobile 
+    $(".mobile-menu .sprite-caret-down").click(function() {
+        // $(this).closest('.menu__sub').toggleClass('is-active');
+        $(this).next('.menu__sub').slideToggle('fast');
+        $(this).toggleClass("is-active");
     });
-
     // index slider
     // $('#etoday-slider').bxSlider({
     //     nextText: '',
