@@ -45,29 +45,6 @@
     }
     /* mobile menu */
     .mobile-menu {
-        display: block;
-        position: fixed;
-        top: -100%;
-        left: 0;
-        right: 0;
-        bottom: 100%;
-        background-color: white;
-        z-index: 101;
-        border-right: 1px solid #ddd;
-        overflow-y: auto;
-        box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.22);
-        transition: all 0.2s linear;
-        .tools {
-            @include clearfix;
-            border-bottom: 1px dashed #eee;
-        }
-        .logo {
-            float: left;
-            padding-left: 8px;
-        }
-        .button-close {
-            float: right;
-        }
         .searchbox {
             margin-top: 8px;
             padding: 0 8px;
@@ -122,10 +99,7 @@
                 }
             }
         }
-        &.is-active {
-            top: 0;
-            bottom: 0;
-        }
+
         .sprite-caret-down {
             position: absolute;
             top: 14px;
@@ -176,6 +150,47 @@
         }
         &.is-active {
             right: 0px;
+        }
+    }
+    .mobile-popup {
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        background-color: white;
+        z-index: 101;
+        border-right: 1px solid #ddd;
+        overflow-y: auto;
+        box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.22);
+        transition: all 0.2s linear;
+        .popup-label {
+            float: left;
+            margin: 16px 0 0 8px;
+            color: #555;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: "RobotoCondensed", Georgia, "Times New Roman", Times, serif;
+        }
+        .tools {
+            @include clearfix;
+            border-bottom: 1px dashed #eee;
+        }
+        .logo {
+            float: left;
+            padding-left: 8px;
+        }
+        .button-close {
+            float: right;
+        }
+        &.is-active {
+            top: 0;
+            bottom: 0;
+        }
+        .zone {
+            margin: 20px 8px 0;
         }
     }
 }

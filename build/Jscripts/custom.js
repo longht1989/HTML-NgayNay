@@ -5,13 +5,13 @@ $(function() {
     // mobile menu
     $(".button-close").click(function() {
         $(".mobile-menu").removeClass("is-active");
-        $(".mobile-24h").removeClass("is-active");
+        $(".mobile-topics").removeClass("is-active");
         $("#mask").removeClass("is-active");
         $("body").removeAttr("style");
     });
     $("#mask").click(function() {
         $(".mobile-menu").removeClass("is-active");
-        $(".mobile-24h").removeClass("is-active");
+        $(".mobile-topics").removeClass("is-active");
         $(this).removeClass("is-active");
         $("body").removeAttr("style");
     });
@@ -20,11 +20,11 @@ $(function() {
         $("#mask").addClass("is-active");
         $("body").css("overflow", "hidden");
     });
-    // $(".button-24h").click(function() {
-    //     $(".mobile-24h").addClass("is-active");
-    //     $("#mask").addClass("is-active");
-    //     $("body").css("overflow", "hidden");
-    // });
+    $(".button-topics").click(function() {
+        $(".mobile-topics").addClass("is-active");
+        $("#mask").addClass("is-active");
+        $("body").css("overflow", "hidden");
+    });
     // toggle sub menu mobile 
     $(".mobile-menu .sprite-caret-down").click(function() {
         // $(this).closest('.menu__sub').toggleClass('is-active');
