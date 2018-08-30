@@ -193,6 +193,16 @@
             margin: 20px 8px 0;
         }
     }
+    &.affix {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+        border-top: none;
+        background-color: white;
+        z-index: 102;
+    }
 }
 
 #mask {

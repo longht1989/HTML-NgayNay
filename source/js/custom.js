@@ -58,7 +58,12 @@ $(function() {
         offset: {
             top: $("#site-content").offset().top
         }
-    })
+    });
+    $('.site-header--mobile').affix({
+        offset: {
+            top: $(".site-header--mobile").offset().top
+        }
+    });
     // add class for story has gif image
     $('.story__thumb img[src$=".gif"]').parents('.story').addClass('story--gif');
 });
