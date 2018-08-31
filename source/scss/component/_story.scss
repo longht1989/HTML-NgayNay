@@ -198,12 +198,22 @@
         }
     }
     &--gif {
+        &.story--horizontal {
+            .story__thumb {
+                width: 80px;
+                a {
+                    padding-bottom: 75%;
+                    background-color: #eee;
+                }
+            }
+        }
         .story__thumb {
             a {
                 display: block;
                 position: relative;
                 overflow: hidden;
                 padding-bottom: 56.25%;
+                background-color: #f0f0f0;
                 img {
                     width: 100%;
                     height: auto;
