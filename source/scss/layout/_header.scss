@@ -163,7 +163,6 @@
         z-index: 101;
         border-right: 1px solid #ddd;
         overflow-y: auto;
-        box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.22);
         transition: all 0.2s linear;
         .popup-label {
             float: left;
@@ -188,6 +187,7 @@
         &.is-active {
             top: 0;
             bottom: 0;
+            box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.22);
         }
         .zone {
             margin: 20px 8px 0;

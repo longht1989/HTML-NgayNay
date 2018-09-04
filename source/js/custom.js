@@ -61,7 +61,7 @@ $(function() {
     });
     $('.site-header--mobile').affix({
         offset: {
-            top: $(".site-header--mobile").offset().top
+            top: $("#site-content").offset().top
         }
     });
     // add class for story has gif image
