@@ -65,11 +65,8 @@
         }
     }
     &__source {
-        color: $brand-primary;
-        margin-right: 8px;
-        &:hover {
-            color: $brand-success;
-        }
+        text-align: right;
+        font-style: italic;
     }
     &__summary {
         color: #111;
@@ -552,7 +549,7 @@
     /* article author */
     &__author {
         text-align: right;
-        font-style: italic;
+        font-weight: bold;
     }
     /* article tag */
     &__tag {

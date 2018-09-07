@@ -262,4 +262,12 @@
             }
         }
     }
+    #listing-zone-ajax & {
+        .story__title {
+            @include breakpoint(xs) {
+                font-weight: normal;
+                font-size: 14px;
+            }
+        }
+    }
 }
