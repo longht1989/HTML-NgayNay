@@ -68,10 +68,10 @@ $(function() {
     $('.story__thumb img[src$=".gif"]').parents('.story').addClass('story--gif');
     // toggle floating social
     $(window).scroll(function() {
-        if ($(window).scrollTop() > $(".article__header").offset().top) {
-            $('.article__floating').show();
+        if ($(window).scrollTop() > $("#site-content").offset().top) {
+            $('.social-floating').show();
         } else {
-            $('.article__floating').hide();
+            $('.social-floating').hide();
         }
     });
 });
