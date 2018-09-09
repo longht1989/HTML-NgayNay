@@ -3,7 +3,7 @@
 *[class^="sprite-"],
 *[class^="sprites-"] {
     display: inline-block;
-    background-image: url(../img/sprites.svg?v=1.04);
+    background-image: url(../img/sprites.svg?v=1.05);
     vertical-align: middle;
     transition: all 0.2s linear;
 }
@@ -113,11 +113,22 @@
         height: 18px;
         background-position: -350px -100px;
     }
+    &-usd-alt,
+    &-finance-alt {
+        width: 10px;
+        height: 18px;
+        background-position: -300px -200px;
+    }
     &-law,
     &-book {
         width: 20px;
         height: 18px;
         background-position: -450px -100px;
+    }
+    &-users{
+        width: 18px;
+        height: 18px;
+        background-position: -350px -200px;
     }
     &-bus {
         width: 18px;
