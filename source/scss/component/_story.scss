@@ -311,6 +311,11 @@
         }
     }
     #listing-zone-ajax & {
+        .story__thumb {
+            @include breakpoint(xs) {
+                width: 120px;
+            }
+        }
         .story__title {
             @include breakpoint(xs) {
                 font-weight: normal;
