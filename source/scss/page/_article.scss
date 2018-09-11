@@ -507,7 +507,7 @@
                 padding-left: 16px;
                 position: relative;
                 font-weight: normal;
-                color: black;
+                color: #3c5898;
                 &:hover {
                     color: $brand-primary;
                 }
@@ -516,7 +516,7 @@
                     display: block;
                     width: 4px;
                     height: 4px;
-                    background-color: $brand-primary;
+                    background-color: black;
                     position: absolute;
                     left: 0;
                     top: 9px;
