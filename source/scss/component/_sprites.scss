@@ -3,7 +3,7 @@
 *[class^="sprite-"],
 *[class^="sprites-"] {
     display: inline-block;
-    background-image: url(../img/sprites.svg?v=1.05);
+    background-image: url(../img/sprites.svg?v=1.06);
     vertical-align: middle;
     transition: all 0.2s linear;
 }
@@ -219,5 +219,10 @@
         width: 16px;
         height: 16px;
         background-position: -400px -50px;
+    }
+    &-btn-print{
+        width: 62px;
+        height: 20px;
+        background-position: 0 -350px;
     }
 }
