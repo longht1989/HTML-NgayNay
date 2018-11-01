@@ -88,3 +88,11 @@
         }
     }
 }
+
+.hidden{
+    &-xs{
+        @include breakpoint(xs){
+            display: none;
+        }
+    }
+}
