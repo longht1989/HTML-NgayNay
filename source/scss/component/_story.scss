@@ -110,13 +110,13 @@
     &--event {
         position: relative;
         .story__thumb {
-            max-height: 100px;
+            max-height: 130px;
             a {
                 &::before {
                     content: '';
                     display: block;
                     background-color: black;
-                    opacity: 0.6;
+                    opacity: 0.5;
                     position: absolute;
                     top: 0;
                     bottom: 0;
